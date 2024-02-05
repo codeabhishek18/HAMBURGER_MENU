@@ -1,0 +1,153 @@
+#main
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(68, 173, 138);
+    width: 400px;
+    height: 400px;
+    margin-top: 7%;
+    border-radius: 7px;
+}
+
+.bar
+{
+    width: 80px;
+    height: 8px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 14px;
+    cursor: pointer;
+}
+
+#container :first-child
+{
+    margin-top: 0px;
+}
+
+.line1
+{
+    animation: tRev 700ms ease-in-out forwards;
+}
+
+@keyframes tRev
+{
+    0%
+    {
+        transform: translateY(22px) rotate(45deg);
+    }
+    50%
+    {
+        transform: translateY(22px);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+
+.line2
+{
+    animation: cenRev 700ms ease-in-out forwards;
+}
+
+@keyframes cenRev
+{
+    0%,50%
+    {
+        transform: scale(0);
+    }
+    100%
+    {
+        transform: scale(1);
+    }
+}
+
+.line3
+{
+    animation: bRev 700ms ease-in-out forwards;
+}
+
+@keyframes bRev
+{
+    0%
+    {
+        transform: translateY(-22px) rotate(135deg);
+    }
+    50%
+    {
+        transform: translateY(-22px);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+
+.top
+{
+    animation: topRev 700ms ease-in-out forwards;
+}
+
+@keyframes topRev
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    50%
+    {
+        transform: translateY(22px);
+    }
+    100%
+    {
+        transform: translateY(22px) rotate(45deg);
+    }
+}
+
+.center
+{
+    animation: centerRev 700ms ease-in-out forwards;
+}
+
+@keyframes centerRev
+{
+    0%
+    {
+        transform: scale(1);
+    }
+    50%,100%
+    {
+        transform: scale(0);
+    }
+}
+
+.bottom
+{
+    animation: bottomRev 700ms ease-in-out forwards;
+}
+
+@keyframes bottomRev
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    50%
+    {
+        transform: translateY(-22px);
+    }
+    100%
+    {
+        transform: translateY(-22px) rotate(135deg);
+    }
+}
